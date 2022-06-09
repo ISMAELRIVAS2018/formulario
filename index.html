@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="d-flex align-items-center justify-content-center mt-5">Ingrese la Información del Profesional</h1>
+    <section id="ingresoDeDatos" class="mx-auto" style="width:800px">
+        <form id="formRegistro" class="row g-3">
+            <div class="form-floating col-md-6">
+                <input type="text" id="inputNombre" placeholder="Nombre" class="form-control">
+                <label for="inputNombre">Nombre</label>
+            </div>
+            <div class="form-floating col-md-6">
+                <input type="text" id="inputApellido" placeholder="Apellido" class="form-control">
+                <label for="inputApellido">Apellido</label>
+            </div>
+            <div class="form-floating col-md-6">
+                <input type="text" id="inputEdad" placeholder="Edad" class="form-control">
+                <label for="inputEdad">Edad</label>
+            </div>
+            <div class="form-floating col-md-6">
+                <input type="password" id="inputPassword" placeholder="Password" class="form-control">
+                <label for="inputPassword">Password</label>
+            </div>
+            <div class="col-md-6">
+                <select name="genero" id="selectGenero" class="form-select">
+                    <option value="genero" selected>Género...</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <select name="area" id="selectArea" class="form-select h-100">
+                    <option value="area" selected>Área...</option>
+                    <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="multimedia">Multimedia</option>
+                    <option value="marketingManager">Marketing Manager</option>
+                    <option value="otraArea">Otra Área</option>
+                </select>
+            </div>
+            <div id="divAvisos">
+            </div>
+            <div class="d-grid gap-2">
+                <button id=btnEnviar type="button" class="btn btn-outline-success">Enviar</button>
+            </div>
+        </form>
+    </section>
+    <br>
+    <section id="muestraDeDatos">
+        <table class="container my-2 table table-striped table-hover">
+            <thead>
+                <tr class="row">
+                    <th class="col-12 col-lg-2">#</th>
+                    <th class="col-12 col-lg-2">Nombre</th>
+                    <th class="col-12 col-lg-2">Apellido</th>
+                    <th class="col-12 col-lg-2">Edad</th>
+                    <th class="col-12 col-lg-2">Género</th>
+                    <th class="col-12 col-lg-2">Área</th>
+                </tr>
+            </thead>
+            <tbody id="tablaSalidas">
+
+            </tbody>
+        </table>
+    </section>
+    <br>
+    <section id="conteoAreas" class="container">
+        <div class="row w-100 d-flex justify-content-center">
+            <div class="col-10 col-lg-2 card w-20 align-items-center">
+                <p class="card-title">@Frontend</p>
+                <h3 id="conteoFront" class="card-text">0</h3>
+                <p class="card-text">Frontend Developer</p>
+            </div>
+            <div class="col-10 col-lg-2 card w-20 d-flex align-items-center">
+                <p class="card-title">@Backend</p>
+                <h3 id="conteoBack" class="card-text">0</h3>
+                <p class="card-title">Backend Developer</p>
+            </div>
+            <div class="col-10 col-lg-2 card w-20 align-items-center">
+                <p class="card-title">@Multimedia</p>
+                <h3 id="conteoMultimedia" class="card-text">0</h3>
+                <p class="card-title">Multimedia</p>
+            </div>
+            <div class="col-10 col-lg-2 card w-20 align-items-center">
+                <p class="card-title">@Marketing Manager</p>
+                <h3 id="conteoMarketing" class="card-text">0</h3>
+                <p class="card-title">Marketing Manager</p>
+            </div>
+            <div class="col-10 col-lg-2 card w-20 align-items-center">
+                <p class="card-title">@Otras Áreas</p>
+                <h3 id="conteoOtras" class="card-text">0</h3>
+                <p class="card-title">Otras Áreas</p>
+            </div>
+
+        </div>
+    </section>
+    <br>
+    <br>
+    <div class="d-grid gap-2">
+        <button id=btnVaciar type="button" class="btn btn-danger">Vaciar Datos</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
